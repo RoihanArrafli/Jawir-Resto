@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Rumah Makan Jawa</title>
+</head>
+<body>
+    <section id="hero">
+        <div class="" id="hero_content">
+            <h1>Jawir Resto</h1>
+            <h2>Kualitas the best pokoke</h2>
+            <a href="">Menu</a>
+        </div>
+    </section>
+    <section id="header">
+        <nav id="navbar">
+            <div class="logo">
+                <img src="images/logo.png" alt="" width="150rem" height="100rem">
+                <h1>Jawir Resto</h1>
+            </div>
+
+            <ul class="sidebar">
+                <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24" style="margin: 7px;" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" fill="white"/></svg></a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#juru_masak">Chef</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#comments">Comments</a></li>
+            </ul>
+            <ul class="topbar">
+                <li class="hideOnMobile"><a href="index.html">Home</a></li>
+                <li class="hideOnMobile"><a href="#menu">Menu</a></li>
+                <li class="hideOnMobile"><a href="#juru_masak">Chef</a></li>
+                <li class="hideOnMobile"><a href="#about">About</a></li>
+                <li class="hideOnMobile"><a href="#contact">Contact</a></li>
+                <li class="hideOnMobile"><a href="#comments">Comments</a></li>
+                <li class="hideOnMobile" id="username-dropdown" style="display: none;">
+                    <a id="username-link" href="#" onclick="toggleDropdown(event)">
+                        Username <i class="fa fa-caret-down"></i>
+                    </a>
+                    <div id="dropdown-menu" class="dropdown-content">
+                        <a href="#" id="logout-link">Logout</a>
+                    </div>
+                </li>
+                <li style="  align-items: center; justify-content: center;;"><a href="login.html" id="login-link">Login</a></li>
+                <li onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" fill="white"/></svg></a></li>
+            </ul>
+        </nav>
+    </section>
+
+    <section id="menu">
+        <h1 id="section">Menu</h1>
+        <div id="menu_row">
+            <div id="menu_col">
+                <h2>Nyarap</h2>
+                <div class="box">
+                    <div id="image">
+                        <img src="images/sarapan.png" alt="">
+                    </div>
+                    <div>
+                        <h3>Pecel ori</h3>
+                        <h4>Rp 10.000</h4>
+                    </div>
+                </div>
+                <div class="box">
+                    <div id="image">
+                        <img src="images/sarapan2.png" alt="">
+                    </div>
+                    <div>
+                        <h3>Ingkung Ayam</h3>
+                        <h4>Rp 45.000</h4>
+                    </div>
+                </div>
+                <div class="box">
+                    <div id="image">
+                        <img src="images/sarapan3.png" alt="">
+                    </div>
+                    <div>
+                        <h3>gudeg</h3>
+                        <h4>Rp 15.000</h4>
+                    </div>
+                </div>
+            </div>
+            <div id="menu_col">
+                <h2>Mindo</h2>
+                <div class="box">
+                    <div id="image">
+                        <img src="images/Sarapan.jpeg" alt="">
+                    </div>
+                    <div>
+                        <h3>Tiwul</h3>
+                        <h4>Rp 11.000</h4>
+                    </div>
+                </div>
+                <div class="box">
+                    <div id="image">
+                        <img src="images/sate.jpg" alt="">
+                    </div>
+                    <div>
+                        <h3>Sate Ponorogo</h3>
+                        <h4>Rp 25.000</h4>
+                    </div>
+                </div>
+                <div class="box">
+                    <div id="image">
+                        <img src="images/gercok.jpeg" alt="">
+                    </div>
+                    <div>
+                        <h3>gercok</h3>
+                        <h4>Rp 20.000</h4>
+                    </div>
+                </div>
+            </div>
+            <div id="menu_col">
+                <h2>Madang</h2>
+                <div class="box">
+                    <div id="image">
+                        <img src="images/Tongseng.jpg" alt="">
+                    </div>
+                    <div>
+                        <h3>Tongseng</h3>
+                        <h4>Rp 35.000</h4>
+                    </div>
+                </div>
+                <div class="box">
+                    <div id="image">
+                        <img src="images/Lontong.jpg" alt="">
+                    </div>
+                    <div>
+                        <h3>Lontong</h3>
+                        <h4>Rp 18.000</h4>
+                    </div>
+                </div>
+                <div class="box">
+                    <div id="image">
+                        <img src="images/sroto.jpg" alt="">
+                    </div>
+                    <div>
+                        <h3>sroto</h3>
+                        <h4>Rp 12.000</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="juru_masak">
+        <h1 id="section">Juru Masak</h1>
+        <div id="jurmas_row">
+            <div class="jurmas_col">
+                <div id="img">
+                    <img src="images/jurmas1.png" alt="Juru Masak">
+                </div>
+                <div>
+                    <h4>iicall</h4>
+                </div>
+            </div>
+            <div class="jurmas_col">
+                <div id="img">
+                    <img src="images/jurmas2.png" alt="Juru Masak">
+                </div>
+                <div>
+                    <h4>stars</h4>
+                </div>
+            </div>
+            <div class="jurmas_col">
+                <div id="img">
+                    <img src="images/jurmas3.png" alt="Juru Masak">
+                </div>
+                <div>
+                    <h4>Roihan</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <h1 id="section">About</h1>
+        <div id="about_row">
+            <div class="about_col">
+                <h1>About Us</h1>
+                <p>Selamat datang di Masakan Jawir, tempat di mana cita rasa autentik Jawa
+                     bertemu dengan keramahan tradisional. Kami bangga mempersembahkan warisan
+                      kuliner Jawa yang kaya akan rasa dan aroma, disajikan dengan kehangatan
+                       dan keramahan yang membuat setiap kunjungan menjadi pengalaman yang tak
+                        terlupakan. Dengan menggunakan bahan-bahan berkualitas dan resep warisan
+                         keluarga, kami berkomitmen untuk menghadirkan hidangan lezat yang
+                          memukau lidah Anda dan memberikan pengalaman makan yang memuaskan
+                           setiap kali Anda datang. Selamat menikmati kelezatan Jawa yang
+                            otentik hanya di Masakan Jawir.</p>
+            </div>
+            <div class="about_col">
+                <div id="about_img">
+                    <img src="images/logo.png" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h1 id="section">Contact</h1>
+        <div id="contact_row">
+            <div class="contact_col">
+                <div>
+                    <p>
+                        <i class="fa fa-map-marker"></i>
+                        Cemani Baru 01/14, Cemani, Grogol, Sukoharjo
+                    </p>
+                    <p>
+                        <a href="mailto: jasjusmelon@gmail.com">
+                        <i class="fa fa-envelope"></i>
+                            jasjusmelon@gmail.com
+                        </a>
+                    </p>
+                    <p>
+                        <a href="hp: +6287838685440">
+                            <i class="fa fa-phone-square"></i>
+                            +6287838685440
+                        </a>
+                    </p>
+                    <h3>Follow Us</h3>
+                    <p id="social">
+                        <a href="">
+                            <i class="fa fa-facebook-official fa-2x"></i>
+                        </a>
+                        <a href="">
+                            <i class="fa fa-instagram fa-2x"></i>
+                        </a>
+                        <a href="">
+                            <i class="fa fa-twitter fa-2x"></i>
+                        </a>
+                    </p>
+                </div>
+            </div>
+            <div class="contact_col">
+                <form id="contact-form">
+                    <h2>Tinggalkan Komentar</h2>
+                    <textarea id="comment-input" rows="6" placeholder="Type Message"></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section id="comments">
+        <h1>Comments</h1>
+        <div id="comments-container">
+        </div>
+    </section> 
+
+    <section id="footer">
+        <div>
+            <h5>Copyright &copy;2024 | <a href="">Jawir Resto - By Jasjus Melon</a></h5>
+        </div>
+        <div id="top">
+            <a href=""><i class="fa fa-chevron-circle-up"></i></a>
+        </div>
+        <div id="top">
+            <a href="#header"><i class="fa fa-chevron-circle-up"></i></a>
+        </div>
+    </section>
+
+    <script>
+
+    //Sidebar
+    function showSidebar(){
+        const sidebar = document.querySelector(".sidebar");
+        const topbar = document.querySelector(".topbar");
+        const logo = document.querySelector(".logo");
+        sidebar.style.display = 'flex';
+        topbar.style.display = 'none';
+        logo.style.justifyContent = 'center';
+    }
+    function hideSidebar(){
+        const sidebar = document.querySelector(".sidebar");
+        const topbar = document.querySelector(".topbar");
+        const logo = document.querySelector(".logo");
+        sidebar.style.display = 'none';
+        topbar.style.display = 'flex';
+        logo.style.justifyContent = 'flex-start';
+    }
+
+    // dropdown
+    function toggleDropdown(event) {
+        event.preventDefault();
+        var dropdownMenu = document.getElementById('dropdown-menu');
+        dropdownMenu.classList.toggle('show');
+    }
+
+    // close dropdown
+    window.onclick = function(event) {
+        if (!event.target.matches('#username-link')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            for (var i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                }
+            }
+        }
+    }
+
+    // logout
+    document.getElementById('logout-link').addEventListener('click', function(event) {
+        event.preventDefault();
+        sessionStorage.removeItem('token');
+        sessionStorage.removeItem('website_id');
+        sessionStorage.removeItem('username');
+        window.location.href = 'index.html';
+    });
+
+    // check login status dan menampilkan pada navbar
+    document.addEventListener('DOMContentLoaded', function() {
+        var token = sessionStorage.getItem('token');
+        var websiteId = sessionStorage.getItem('website_id');
+        var username = sessionStorage.getItem('username');
+        
+            if (token && websiteId && username) {
+                document.getElementById('login-link').style.display = 'none';
+                document.getElementById('username-dropdown').style.display = 'block';
+                document.getElementById('username-link').textContent = username + ' ';
+            } else {
+                document.getElementById('login-link').style.display = 'block';
+                document.getElementById('username-dropdown').style.display = 'none';
+            }
+        });
+
+    // tambah komentar
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        var websiteId = sessionStorage.getItem('website_id');
+        var comment = document.getElementById('comment-input').value;
+
+        if (!websiteId) {
+            alert('User tidak diketahui!');
+            return;
+        }
+
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", "https://api-komentar-pengunjung.desafintech.com/api/comments", true);
+        xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState === XMLHttpRequest.DONE) {
+                if (xhr.status === 201) {
+                    alert('Komentar sukses ditambahkan!');
+                    document.getElementById('comment-input').value = '';
+                    loadComments();
+                } else {
+                    console.log('Error:', xhr.responseText);
+                    alert('gagal menambahkan komentar!');
+                }
+            }
+        };
+
+        xhr.send(JSON.stringify({ websiteId: websiteId, comment: comment }));
+    });
+
+         function loadComments() {
+            var token = sessionStorage.getItem('token');
+            var websiteId = sessionStorage.getItem('website_id');
+            if (!token || !websiteId) {
+                alert('Anda belum login!');
+                return;
+            }
+
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", `https://api-komentar-pengunjung.desafintech.com/api/website_comments/${websiteId}`, true);
+            xhr.setRequestHeader("Authorization", "Bearer " + token);
+
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === XMLHttpRequest.DONE) {
+                    if (xhr.status === 200) {
+                        var response = JSON.parse(xhr.responseText);
+                        var commentsContainer = document.getElementById('comments-container');
+                        commentsContainer.innerHTML = '';
+                        response.data.forEach(function(comment) {
+                            var p = document.createElement('p');
+                            p.textContent = comment.comment;
+                            commentsContainer.appendChild(p);
+                        });
+                    } else {
+                        console.log('Error:', xhr.status, xhr.statusText, xhr.responseText);
+                    }
+                }
+            };
+
+            xhr.onerror = function() {
+                console.error('Request gagal');
+            };
+
+            xhr.send();
+        }
+
+        // load komentar
+        document.addEventListener('DOMContentLoaded', function() {
+            loadComments();
+        });
+
+    </script>
+</body>
+</html>
