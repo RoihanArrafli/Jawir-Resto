@@ -432,7 +432,7 @@ body.login{
   justify-content: center;
 }
 ::selection{
-  background: rgba(26,188,156,0.3);
+  background: white;
 }
 .container{
   max-width: 440px;
@@ -478,7 +478,7 @@ body.login{
 form .row input:focus{
   border-color: gray;
   /* border-color: #16a085; */
-  box-shadow: inset 0px 0px 2px 2px rgba(26,188,156,0.25);
+  box-shadow: inset 0px 0px 2px 2px white;
 }
 form .row input::placeholder{
   color: #999;
@@ -522,7 +522,7 @@ form .row input::placeholder{
   cursor: pointer;
 }
 form .button input:hover{
-  background: white;
+  background: whitesmoke;
 }
 .wrapper form .signup-link{
   text-align: center;
