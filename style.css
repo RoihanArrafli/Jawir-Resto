@@ -522,7 +522,7 @@ form .row input::placeholder{
   cursor: pointer;
 }
 form .button input:hover{
-  background: #12876f;
+  background: white;
 }
 .wrapper form .signup-link{
   text-align: center;
