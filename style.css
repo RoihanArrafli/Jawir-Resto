@@ -210,18 +210,20 @@ nav ul li:first-child{
     font-family: cursive;
 }
 
-#image{
+#image {
     width: 150px;
     height: 150px;
     border-radius: 50%;
     padding: 5px;
-    border: 2px solid red;
+    border: 5px solid red;
+    overflow: hidden; 
 }
-#image img{
-    width: 150px;
-    height: 150px;
+
+#image img {
+    width: 100%; /* This is the key change */
+    height: 100%;
     border-radius: 50%;
-    object-fit: cover;
+    object-fit: cover;
 }
 
 .box{
