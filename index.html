@@ -396,22 +396,18 @@
                     var p = document.createElement('p');
                     p.textContent = comment.comment;
 
-                    // Create a span for the username or "Anonymous"
                     var usernameSpan = document.createElement('span');
-                    usernameSpan.classList.add('comment-username'); // Add a class for styling
+                    usernameSpan.classList.add('comment-username');
 
-                    // Check if the comment has a username associated with it
                     if (comment.username) {
                         usernameSpan.textContent = comment.username;
                     } else {
-                        usernameSpan.textContent = `Anonymous (${comment.id})`;
+                        usernameSpan.textContent = `User (${comment.id})`;
                     }
 
-                    // Append the elements to the comment div
-                    commentDiv.appendChild(usernameSpan); // Display username first
+                    commentDiv.appendChild(usernameSpan);
                     commentDiv.appendChild(p);
 
-                    // Append the comment div to the comments container
                     commentsContainer.appendChild(commentDiv);
                 });
             } else {
