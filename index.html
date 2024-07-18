@@ -35,6 +35,8 @@
                 <li><a href="#about">About</a></li>
                 <li><a href="#contact">Contact</a></li>
                 <li><a href="#comments">Comments</a></li>
+                <li style="  align-items: center; justify-content: center;;"><a href="login.html" id="login-link">Login</a></li>
+                <li style="  align-items: center; justify-content: center;;"><a href="register.html" id="register-link">Register</a></li>
             </ul>
             <ul class="topbar">
                 <li class="hideOnMobile"><a href="index.html">Home</a></li>
@@ -51,7 +53,6 @@
                         <a href="#" id="logout-link">Logout</a>
                     </div>
                 </li>
-                <li style="  align-items: center; justify-content: center;;"><a href="login.html" id="login-link">Login</a></li>
                 <li onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" fill="white"/></svg></a></li>
             </ul>
         </nav>
@@ -326,10 +327,12 @@
         
             if (token && websiteId && username) {
                 document.getElementById('login-link').style.display = 'none';
+                document.getElementById('register-link').style.display = 'none';
                 document.getElementById('username-dropdown').style.display = 'block';
                 document.getElementById('username-link').textContent = username + ' ';
             } else {
                 document.getElementById('login-link').style.display = 'block';
+                document.getElementById('register-link').style.display = 'block';
                 document.getElementById('username-dropdown').style.display = 'none';
             }
         });
