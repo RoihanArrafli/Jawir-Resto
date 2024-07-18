@@ -102,7 +102,7 @@ nav ul li{
 }
 
 nav ul li:hover, #phone a:hover{
-    background: rgb(255, 255, 255);
+    background-color: #4f4f4f;
     border-radius: 5px;
     cursor: pointer;
 }
@@ -148,20 +148,24 @@ nav ul li:first-child{
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: black;
-    min-width: 160px;
+    background-color: rgb(48, 48, 48);
+    min-width: 115px;
+    margin-top: 5px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    border-radius: 10px;
     z-index: 1;
 }
 
 .dropdown-content a {
     color: white;
     padding: 12px 16px;
+    text-align: center;
     text-decoration: none;
     display: block;
 }
 
-.dropdown-content a:hover {background-color: #f1f1f1;}
+.dropdown-content a:hover {background-color: #4f4f4f;
+}
 
 .show {display: block;}
 
@@ -332,12 +336,17 @@ nav ul li:first-child{
     margin: 3px;
 }
 
+#social a:hover{
+    color: #c30000;
+}
+
 .contact_col form{
     display: flex;
     flex-direction: column;
     background-color: gray;
     width: 70%;
     padding: 20px 40px 20px 20px;
+    border-radius: 4px;
 }
 
 .contact_col form h2{
@@ -352,10 +361,12 @@ nav ul li:first-child{
     margin: 5px;
 }
 
-.contact_col form textarea{
+.contact_col form textarea {
     width: 100%;
     padding: 5px;
     margin: 5px;
+    border-radius: 4px;
+    resize: vertical;
 }
 
 .contact_col form button{
@@ -364,6 +375,12 @@ nav ul li:first-child{
     color: #fff;
     background-color: black;
     border: 1px solid black;
+    border-radius: 4px;
+}
+
+.contact_col form button:hover{
+    background-color: #292929;
+    border: 1px solid #292929;
 }
 
 #footer{
@@ -613,7 +630,7 @@ h1 {
     }
 }
 
-@media(max-width: 400px) {
+@media(max-width: 500px) {
     .sidebar{ width: 100%;}
     #hero_content h1 {
         font-size: 1.5rem; 
@@ -645,9 +662,22 @@ h1 {
     }
 }
 
-@media(max-width: 400px) {
+@media(max-width: 500px) {
     nav h1 {
         font-size: 1.2rem; 
         word-break: keep-all; 
+    }
+    nav ul {
+        display: none;
+    }
+    nav h1 {
+        margin-right: auto;
+    }
+    .logo {
+        margin-left: 10px;
+    }
+    .sidebar .button {
+        display: block;
+        margin-top: 20px;
     }
 }
