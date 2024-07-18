@@ -369,47 +369,69 @@
         xhr.send(JSON.stringify({ websiteId: websiteId, comment: comment }));
     });
 
-         function loadComments() {
-            var token = sessionStorage.getItem('token');
-            var websiteId = sessionStorage.getItem('website_id');
-            if (!token || !websiteId) {
-                alert('Anda belum login!');
-                return;
-            }
+    function loadComments() {
+    var token = sessionStorage.getItem('token');
+    var websiteId = sessionStorage.getItem('website_id');
+    if (!token || !websiteId) {
+        alert('Anda belum login!');
+        return;
+    }
 
-            var xhr = new XMLHttpRequest();
-            xhr.open("GET", `https://api-komentar-pengunjung.desafintech.com/api/website_comments/${websiteId}`, true);
-            xhr.setRequestHeader("Authorization", "Bearer " + token);
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", `https://api-komentar-pengunjung.desafintech.com/api/website_comments/${websiteId}`, true);
+    xhr.setRequestHeader("Authorization", "Bearer " + token);
 
-            xhr.onreadystatechange = function() {
-                if (xhr.readyState === XMLHttpRequest.DONE) {
-                    if (xhr.status === 200) {
-                        var response = JSON.parse(xhr.responseText);
-                        var commentsContainer = document.getElementById('comments-container');
-                        commentsContainer.innerHTML = '';
-                        response.data.forEach(function(comment) {
-                            var p = document.createElement('p');
-                            p.textContent = comment.comment;
-                            commentsContainer.appendChild(p);
-                        });
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState === XMLHttpRequest.DONE) {
+            if (xhr.status === 200) {
+                var response = JSON.parse(xhr.responseText);
+                var commentsContainer = document.getElementById('comments-container');
+                commentsContainer.innerHTML = '';
+                response.data.forEach(function(comment) {
+                    // Create a div to hold the comment and ID
+                    var commentDiv = document.createElement('div');
+                    commentDiv.classList.add('comment-item'); // Add a class for styling
+
+                    // Create a paragraph for the comment text
+                    var p = document.createElement('p');
+                    p.textContent = comment.comment;
+
+                    // Create a span for the username or "Anonymous"
+                    var usernameSpan = document.createElement('span');
+                    usernameSpan.classList.add('comment-username'); // Add a class for styling
+
+                    // Check if the comment has a username associated with it
+                    if (comment.username) {
+                        usernameSpan.textContent = comment.username;
                     } else {
-                        console.log('Error:', xhr.status, xhr.statusText, xhr.responseText);
+                        usernameSpan.textContent = `Anonymous (${comment.id})`;
                     }
-                }
-            };
 
-            xhr.onerror = function() {
-                console.error('Request gagal');
-            };
+                    // Append the elements to the comment div
+                    commentDiv.appendChild(usernameSpan); // Display username first
+                    commentDiv.appendChild(p);
 
-            xhr.send();
+                    // Append the comment div to the comments container
+                    commentsContainer.appendChild(commentDiv);
+                });
+            } else {
+                console.log('Error:', xhr.status, xhr.statusText, xhr.responseText);
+            }
         }
+    };
 
-        // load komentar
-        document.addEventListener('DOMContentLoaded', function() {
-            loadComments();
-        });
+    xhr.onerror = function() {
+        console.error('Request gagal');
+    };
 
+    xhr.send();
+}
+
+// load komentar
+document.addEventListener('DOMContentLoaded', function() {
+    loadComments();
+});
     </script>
 </body>
 </html>
+    
